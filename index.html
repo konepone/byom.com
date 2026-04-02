@@ -1,0 +1,688 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karin G. Byom – Systemic Coach &amp; Facilitator for Leaders and Organisations</title>
+    <meta name="description" content="Systemic coaching, facilitation and supervision for leaders, founders, teams and couples at turning points. Based in Norway, working online in English, German and Norwegian.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #F4DFA3;
+            --gold-dark: #8C6A16;
+            --gold-pale: rgba(212,175,55,0.06);
+            --bg: #FDFCFA;
+            --bg-warm: #F8F5EF;
+            --bg-section: #FAF8F4;
+            --text: #15100C;
+            --text-mid: #4A4038;
+            --text-light: #8A7F72;
+            --border: #EDE8DF;
+            --white: #FFFFFF;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.75;
+            font-size: 17px;
+        }
+        h1,h2,h3,h4 {
+            font-family: 'Lexend', sans-serif;
+            font-weight: 400;
+            color: var(--text);
+        }
+
+        /* LANGUAGE */
+        [lang]:not([lang="en"]) { display: none; }
+        body.lang-de [lang="en"] { display: none; }
+        body.lang-de [lang="de"] { display: block; }
+        body.lang-no [lang="en"] { display: none; }
+        body.lang-no [lang="no"] { display: block; }
+        body.lang-en [lang="en"] { display: block; }
+        span[lang]:not(span[lang="en"]) { display: none; }
+        body.lang-de span[lang="en"] { display: none; }
+        body.lang-de span[lang="de"] { display: inline; }
+        body.lang-no span[lang="en"] { display: none; }
+        body.lang-no span[lang="no"] { display: inline; }
+
+        /* NAV */
+        nav {
+            position: fixed; top: 0; width: 100%;
+            background: rgba(253,252,250,0.97);
+            backdrop-filter: blur(12px);
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1100px; margin: 0 auto; padding: 0.75rem 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .nav-logo {
+            display: flex; align-items: center; gap: 0.6rem;
+            text-decoration: none; color: var(--text);
+        }
+        .nav-logo img { height: 38px; width: auto; }
+        .nav-logo span {
+            font-family: 'Lexend', sans-serif; font-size: 1.3rem;
+            font-weight: 500; letter-spacing: 3px; color: var(--text);
+        }
+        .nav-links {
+            display: flex; gap: 2rem; align-items: center; list-style: none;
+        }
+        .nav-links a {
+            text-decoration: none; color: var(--text-light);
+            font-size: 0.88rem; font-weight: 400; transition: color 0.3s;
+            letter-spacing: 0.3px;
+        }
+        .nav-links a:hover { color: var(--gold-dark); }
+        .nav-cta {
+            background: var(--gold) !important; color: var(--white) !important;
+            padding: 0.5rem 1.3rem; border-radius: 3px;
+            font-weight: 400 !important; transition: background 0.3s !important;
+        }
+        .nav-cta:hover { background: var(--gold-dark) !important; }
+        .nav-lang { display: flex; gap: 0.4rem; border-left: 1px solid var(--border); padding-left: 1.5rem; }
+        .nav-lang a {
+            font-size: 0.75rem; color: var(--text-light); text-decoration: none;
+            cursor: pointer; padding: 2px 5px; letter-spacing: 1px;
+        }
+        .nav-lang a.active { color: var(--gold-dark); font-weight: 500; }
+        .nav-toggle { display: none; cursor: pointer; background: none; border: none; padding: 0.5rem; }
+        .nav-toggle span { display: block; width: 20px; height: 1.5px; background: var(--text); margin: 5px 0; }
+
+        /* HERO */
+        .hero {
+            min-height: 80vh; display: flex; align-items: center; justify-content: center;
+            text-align: center; padding: 8rem 2rem 5rem;
+            background: var(--bg);
+        }
+        .hero-content { max-width: 700px; }
+        .hero h1 {
+            font-size: 2.6rem; font-weight: 300; line-height: 1.35;
+            margin-bottom: 1.5rem; letter-spacing: -0.5px;
+        }
+        .hero h1 em { font-style: normal; color: var(--gold-dark); }
+        .hero p {
+            font-size: 1.05rem; color: var(--text-mid); max-width: 580px;
+            margin: 0 auto 2.5rem; line-height: 1.8;
+        }
+        .btn {
+            display: inline-block; background: var(--gold); color: var(--white);
+            padding: 0.8rem 2rem; text-decoration: none; border-radius: 3px;
+            font-weight: 400; font-size: 0.9rem; transition: all 0.3s;
+            font-family: 'Lexend', sans-serif; letter-spacing: 0.5px;
+        }
+        .btn:hover { background: var(--gold-dark); }
+        .hero-sub { margin-top: 1rem; font-size: 0.88rem; color: var(--text-light); }
+        .hero-sub a { color: var(--gold-dark); text-decoration: none; }
+
+        /* GOLD DIVIDER */
+        .gold-divider {
+            text-align: center; padding: 2rem 0;
+        }
+        .gold-divider::after {
+            content: ''; display: block; width: 1px; height: 50px;
+            background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+            margin: 0 auto;
+        }
+
+        /* SECTIONS */
+        section { padding: 5rem 2rem; }
+        .section-inner { max-width: 960px; margin: 0 auto; }
+        .section-narrow { max-width: 640px; margin: 0 auto; }
+        .section-label {
+            font-family: 'Lexend', sans-serif; font-size: 0.65rem;
+            text-transform: uppercase; letter-spacing: 4px;
+            color: var(--gold-dark); margin-bottom: 1rem;
+        }
+        .section-title {
+            font-size: 1.8rem; font-weight: 300; margin-bottom: 0.5rem;
+            letter-spacing: -0.3px;
+        }
+        .section-warm { background: var(--bg-warm); }
+        .gold-line { width: 32px; height: 1px; background: var(--gold); margin: 1.5rem 0 2rem; }
+        .gold-line-center { width: 32px; height: 1px; background: var(--gold); margin: 1.5rem auto 2rem; }
+
+        /* INTRO */
+        .intro-center { text-align: center; }
+        .intro-center p {
+            max-width: 600px; margin: 0 auto 1rem;
+            color: var(--text-mid); font-size: 1.02rem;
+        }
+
+        /* SERVICES */
+        .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+        .service-card {
+            background: var(--white); border: 1px solid var(--border);
+            padding: 2.2rem; transition: border-color 0.3s;
+        }
+        .service-card:hover { border-color: var(--gold-light); }
+        .service-card h3 {
+            font-size: 1.05rem; font-weight: 500; margin-bottom: 0.8rem;
+            letter-spacing: -0.2px;
+        }
+        .service-card p { color: var(--text-mid); font-size: 0.92rem; margin-bottom: 0.6rem; line-height: 1.7; }
+        .service-for { font-size: 0.82rem; color: var(--gold-dark); margin-top: 0.5rem; }
+        .service-link {
+            display: inline-block; margin-top: 0.8rem; color: var(--gold-dark);
+            text-decoration: none; font-size: 0.85rem; letter-spacing: 0.3px;
+        }
+        .service-link:hover { color: var(--gold); }
+
+        /* APPROACH */
+        .approach-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
+        .approach-grid p { margin-bottom: 1rem; color: var(--text-mid); font-size: 0.95rem; }
+        .values-list { list-style: none; margin-top: 0.5rem; }
+        .values-list li {
+            padding: 0.65rem 0; border-bottom: 1px solid var(--border);
+            display: flex; gap: 0.6rem; align-items: baseline;
+        }
+        .values-list li:last-child { border: none; }
+        .val-name {
+            color: var(--gold-dark); font-weight: 500; min-width: 110px;
+            font-family: 'Lexend', sans-serif; font-size: 0.82rem;
+            letter-spacing: 0.3px;
+        }
+        .val-desc { font-size: 0.88rem; color: var(--text-mid); }
+
+        /* ABOUT */
+        .about-text p { margin-bottom: 1rem; color: var(--text-mid); font-size: 0.95rem; }
+
+        /* TESTIMONIALS */
+        .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+        .test-card {
+            background: var(--white); border: 1px solid var(--border);
+            padding: 2rem;
+        }
+        .test-card blockquote {
+            font-style: italic; color: var(--text-mid); font-size: 0.9rem;
+            line-height: 1.7; margin-bottom: 1.2rem;
+        }
+        .test-card cite {
+            font-style: normal; font-family: 'Lexend', sans-serif;
+            font-size: 0.78rem; color: var(--gold-dark); letter-spacing: 0.5px;
+        }
+
+        /* CONTACT */
+        .contact-center { text-align: center; max-width: 500px; margin: 0 auto; }
+        .contact-center p { margin-bottom: 1.5rem; color: var(--text-mid); }
+        .contact-links { display: flex; flex-direction: column; gap: 0.6rem; align-items: center; margin-bottom: 1.5rem; }
+        .contact-links a { color: var(--gold-dark); text-decoration: none; font-size: 1rem; letter-spacing: 0.3px; }
+        .contact-links a:hover { color: var(--gold); }
+        .contact-loc { font-size: 0.85rem; color: var(--text-light); }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--border); padding: 2rem;
+            text-align: center; font-size: 0.78rem; color: var(--text-light);
+        }
+        footer a { color: var(--gold-dark); text-decoration: none; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg); padding: 1.5rem 2rem; border-bottom: 1px solid var(--border); gap: 1rem; }
+            .nav-links.open { display: flex; }
+            .nav-toggle { display: block; }
+            .nav-lang { border: none; padding: 0; }
+            .hero h1 { font-size: 1.9rem; }
+            .hero { min-height: auto; padding: 7rem 1.5rem 3rem; }
+            .services-grid, .approach-grid, .test-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body class="lang-en">
+
+<nav>
+    <div class="nav-inner">
+        <a href="#" class="nav-logo">
+            <img src="assets/logos/Logo_V2.0-14.png" alt="BYOM">
+            <span>BYOM</span>
+        </a>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#services"><span lang="en">Services</span><span lang="de">Angebote</span><span lang="no">Tjenester</span></a></li>
+            <li><a href="#approach"><span lang="en">Approach</span><span lang="de">Arbeitsweise</span><span lang="no">Tiln&aelig;rming</span></a></li>
+            <li><a href="#about"><span lang="en">About</span><span lang="de">&Uuml;ber mich</span><span lang="no">Om meg</span></a></li>
+            <li><a href="#contact" class="nav-cta"><span lang="en">Free Clarity Call</span><span lang="de">Erstgespr&auml;ch</span><span lang="no">Gratis samtale</span></a></li>
+            <li class="nav-lang">
+                <a onclick="setLang('en')" id="lang-en" class="active">EN</a>
+                <a onclick="setLang('de')" id="lang-de">DE</a>
+                <a onclick="setLang('no')" id="lang-no">NO</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ===== ENGLISH ===== -->
+<div lang="en">
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Clarity for people and organisations at <em>turning points</em>.</h1>
+        <p>I facilitate processes when a lot is moving at once and things feel unclear. I hold a calm, direct space, break complexity down into what really matters, and help you see where to look next.</p>
+        <a href="#contact" class="btn">Book a Free Clarity Call</a>
+        <p class="hero-sub">or <a href="#services">see how I work</a></p>
+    </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<section>
+    <div class="section-narrow intro-center">
+        <div class="section-label">Who this is for</div>
+        <div class="gold-line-center"></div>
+        <p>This work is for you if you carry responsibility and complexity. If you are part of a team or organisation in transition. If you are at a turning point where pushing harder no longer works.</p>
+        <p>If you are looking for honest reflection, structure, and clarity rather than quick fixes.</p>
+        <p style="font-size:0.9rem; color:var(--text-light); margin-top:1.5rem;">I work with individuals, couples, teams, organisations, and associations across Europe.<br>Based in Norway, working internationally.</p>
+    </div>
+</section>
+
+<section id="services" class="section-warm">
+    <div class="section-inner">
+        <div class="section-label">Services</div>
+        <h2 class="section-title">How I work with you</h2>
+        <div class="gold-line"></div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Individual &amp; Couples Coaching</h3>
+                <p>A clear, honest space where we look at what is really happening in your life and relationships. We work with patterns, dynamics, and what is present in the moment, so that complexity becomes understandable and movement becomes possible again.</p>
+                <div class="service-for">For people in transition, at decision points, under pressure, or with a clear wish to grow. For couples who need clarity and honest conversation.</div>
+                <a href="#contact" class="service-link">Free introductory call &rarr;</a>
+            </div>
+            <div class="service-card">
+                <h3>Deep Dive Program</h3>
+                <p>For people at turning points. After illness, burnout, separation, or other major life shifts. Individual coaching, a group call, an intensive in-person weekend with 6 to 12 people, followed by months of integration coaching. An adaptive process, not a programme.</p>
+                <div class="service-for">Intensive in-person and online. A deep dive into your development with other coaches and participants.</div>
+                <a href="#contact" class="service-link">Free introductory call &rarr;</a>
+            </div>
+            <div class="service-card">
+                <h3>Corporate Facilitation &amp; Leadership</h3>
+                <p>Facilitation, process support, and leadership development. Holding space for teams, making dynamics visible, creating structure so movement becomes possible. Training, teaching, individual leadership coaching, and facilitation of key processes.</p>
+                <div class="service-for">For entrepreneurs, leadership teams, and organisations at turning points. All work is tailored.</div>
+                <a href="#contact" class="service-link">Free introductory call &rarr;</a>
+            </div>
+            <div class="service-card">
+                <h3>Supervision &amp; Case Consultation</h3>
+                <p>Supervision and case consultation for counsellors, practitioners, and leaders who work closely with people. Reflective practice, clear boundaries, sustainable professional growth. Individually and in groups.</p>
+                <div class="service-for">For professionals in leadership or helping professions. Online and in person.</div>
+                <a href="#contact" class="service-link">Free introductory call &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="approach">
+    <div class="section-inner">
+        <div class="section-label">My Approach</div>
+        <h2 class="section-title">How clarity emerges</h2>
+        <div class="gold-line"></div>
+        <div class="approach-grid">
+            <div>
+                <p>My work looks at you, your relationships, and your context at the same time. Change starts from who you are and how you show up, then moves into what you do and what you create.</p>
+                <p>I combine methods from systemic coaching, integral frameworks, and relational leadership with a very present, human way of working. Sessions are structured but not scripted.</p>
+                <p>The space is clear, honest, and kind. I name what I see, ask precise questions, and stay with you when it gets uncomfortable, without pushing past your boundaries.</p>
+                <p>You are active in the process. Over time this builds awareness, choice, and new ways of relating. Insight is important, but the goal is lived change.</p>
+            </div>
+            <div>
+                <h4 style="font-size:0.88rem; margin-bottom:0.3rem;">What guides this work</h4>
+                <ul class="values-list">
+                    <li><span class="val-name">Courage</span><span class="val-desc">Naming what is real, even when it is uncomfortable.</span></li>
+                    <li><span class="val-name">Clarity</span><span class="val-desc">Simplifying the complex so people can act.</span></li>
+                    <li><span class="val-name">Connection</span><span class="val-desc">Working with people, not roles.</span></li>
+                    <li><span class="val-name">Lightness</span><span class="val-desc">Depth without heaviness.</span></li>
+                    <li><span class="val-name">Responsibility</span><span class="val-desc">Showing up consistently and honestly.</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section-warm">
+    <div class="section-inner">
+        <div class="section-label">About</div>
+        <h2 class="section-title">Karin Gutenbrunner Byom</h2>
+        <div class="gold-line"></div>
+        <div class="about-text" style="max-width:700px;">
+            <p>I grew up on a pioneering organic farm in Upper Austria, shaped by responsibility, community, and the courage to try new paths. For many years I initiated and supported civic and community projects, and later worked in project management, change management, and agile organisational development across different sectors.</p>
+            <p>Since 2019 I have been working independently as a coach and facilitator, grounded in solid coach training and ongoing education in counselling and supervision. I am trained in systemic and integral coaching and in relational leadership.</p>
+            <p>A severe Long Covid episode in 2022 deepened my practice. Months of enforced, almost complete sensory reduction showed me what it means when orientation, energy, and what used to be self-evident fall away, and what people need in order to regain their agency step by step.</p>
+            <p>I work with people and organisations at turning points and in phases of uncertainty, pressure, or new beginnings. My way of working is direct and warm, professionally clear and human in tone.</p>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials">
+    <div class="section-inner" style="text-align:center;">
+        <div class="section-label">Testimonials</div>
+        <h2 class="section-title">What clients say</h2>
+        <div class="gold-line-center"></div>
+        <div class="test-grid">
+            <div class="test-card">
+                <blockquote>"You don't sugarcoat, you don't waste time, and you don't hide behind polite diplomacy. Working with you feels like stepping into clarity. You think fast, you connect dots instantly, and you reflect with a depth most people never reach."</blockquote>
+                <cite>Joachim Majambere</cite>
+            </div>
+            <div class="test-card">
+                <blockquote>"Working with Karin has been one of the easiest 'yeses' of my professional life. She brings a level of presence, honesty, and emotional clarity that makes the work feel both grounded and expansive."</blockquote>
+                <cite>Maaz Raees</cite>
+            </div>
+            <div class="test-card">
+                <blockquote>"Testimonial pending."</blockquote>
+                <cite>Dr. Martin Wolfsegger</cite>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section-warm">
+    <div class="contact-center">
+        <div class="section-label">Contact</div>
+        <h2 class="section-title">Start here</h2>
+        <div class="gold-line-center"></div>
+        <p>If you are at a point where something needs to change but the direction is not yet clear, this is the right place to start. Our first conversation is free and uncomplicated.</p>
+        <div class="contact-links">
+            <a href="mailto:karin@byom.com">karin@byom.com</a>
+            <a href="tel:+4747382740">+47 473 82 740</a>
+        </div>
+        <p class="contact-loc">Based in Askim, Norway. Working internationally, online and in person.</p>
+    </div>
+</section>
+
+</div>
+
+<!-- ===== DEUTSCH ===== -->
+<div lang="de">
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Klarheit f&uuml;r Menschen und Organisationen an <em>Wendepunkten</em>.</h1>
+        <p>Ich begleite Prozesse, wenn vieles gleichzeitig in Bewegung ist und die Richtung unklar wird. Ich halte einen ruhigen, direkten Raum, breche Komplexit&auml;t auf das Wesentliche herunter und helfe dir zu sehen, wo der n&auml;chste Schritt liegt.</p>
+        <a href="#contact" class="btn">Kostenfreies Erstgespr&auml;ch</a>
+        <p class="hero-sub">oder <a href="#services">mehr &uuml;ber meine Arbeitsweise</a></p>
+    </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<section>
+    <div class="section-narrow intro-center">
+        <div class="section-label">F&uuml;r wen</div>
+        <div class="gold-line-center"></div>
+        <p>Diese Arbeit ist f&uuml;r dich, wenn du Verantwortung und Komplexit&auml;t tr&auml;gst. Wenn du Teil eines Teams oder einer Organisation im Wandel bist. Wenn du an einem Wendepunkt stehst, an dem mehr Druck keine L&ouml;sung mehr ist.</p>
+        <p>Wenn du ehrliche Reflexion, Struktur und Klarheit suchst statt schneller L&ouml;sungen.</p>
+        <p style="font-size:0.9rem; color:var(--text-light); margin-top:1.5rem;">Ich arbeite mit Einzelpersonen, Paaren, Teams, Organisationen und Vereinen in ganz Europa.<br>Standort Norwegen, international t&auml;tig.</p>
+    </div>
+</section>
+
+<section id="services" class="section-warm">
+    <div class="section-inner">
+        <div class="section-label">Angebote</div>
+        <h2 class="section-title">Wie ich arbeite</h2>
+        <div class="gold-line"></div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Einzel- &amp; Paarberatung</h3>
+                <p>Ein klarer, ehrlicher Raum, in dem wir schauen, was in deinem Leben und deinen Beziehungen wirklich passiert. Wir arbeiten mit Mustern, Dynamiken und dem, was gerade pr&auml;sent ist, damit Komplexit&auml;t verst&auml;ndlich und Bewegung wieder m&ouml;glich wird.</p>
+                <div class="service-for">F&uuml;r Menschen in Umbruchphasen, an Entscheidungspunkten, unter Druck oder mit dem klaren Wunsch zu wachsen. F&uuml;r Paare, die Klarheit und ehrliches Gespr&auml;ch brauchen.</div>
+                <a href="#contact" class="service-link">Kostenfreies Erstgespr&auml;ch &rarr;</a>
+            </div>
+            <div class="service-card">
+                <h3>Deep Dive Programm</h3>
+                <p>F&uuml;r Menschen an Wendepunkten. Nach Krankheit, Burnout, Trennung oder anderen gro&szlig;en Lebensver&auml;nderungen. Einzelcoaching, Gruppencalls, ein intensives Pr&auml;senzwochenende mit 6 bis 12 Personen, gefolgt von Monaten des Integrationscoachings.</p>
+                <div class="service-for">Intensiv, online und in Pr&auml;senz. Ein Deep Dive in deine Entwicklung mit anderen Coaches und Teilnehmenden.</div>
+                <a href="#contact" class="service-link">Kostenfreies Erstgespr&auml;ch &rarr;</a>
+            </div>
+            <div class="service-card">
+                <h3>Facilitation &amp; F&uuml;hrungsentwicklung</h3>
+                <p>Facilitation, Prozessbegleitung und F&uuml;hrungsentwicklung. Raum halten f&uuml;r Teams, Dynamiken sichtbar machen, Struktur schaffen, damit Bewegung m&ouml;glich wird. Training, Lehre, individuelles F&uuml;hrungscoaching.</p>
+                <div class="service-for">F&uuml;r Unternehmer:innen, F&uuml;hrungsteams und Organisationen an Wendepunkten. Ma&szlig;geschneidert.</div>
+                <a href="#contact" class="service-link">Kostenfreies Erstgespr&auml;ch &rarr;</a>
+            </div>
+            <div class="service-card">
+                <h3>Supervision &amp; Fallberatung</h3>
+                <p>Supervision und Fallberatung f&uuml;r Berater:innen, Fachkr&auml;fte und F&uuml;hrungspersonen. Reflexive Praxis, klare Grenzen, nachhaltige professionelle Entwicklung. Einzeln und in Gruppen.</p>
+                <div class="service-for">F&uuml;r Fachleute in F&uuml;hrung oder helfenden Berufen. Online und in Pr&auml;senz.</div>
+                <a href="#contact" class="service-link">Kostenfreies Erstgespr&auml;ch &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="approach">
+    <div class="section-inner">
+        <div class="section-label">Arbeitsweise</div>
+        <h2 class="section-title">Wie Klarheit entsteht</h2>
+        <div class="gold-line"></div>
+        <div class="approach-grid">
+            <div>
+                <p>Meine Arbeit schaut auf dich, deine Beziehungen und deinen Kontext gleichzeitig. Ver&auml;nderung beginnt bei dem, wer du bist und wie du auftrittst, und bewegt sich dann zu dem, was du tust und erschaffst.</p>
+                <p>Ich kombiniere Methoden aus systemischem Coaching, integralen Ans&auml;tzen und relationaler F&uuml;hrung mit einer sehr pr&auml;senten, menschlichen Arbeitsweise. Sitzungen sind strukturiert, aber nicht geskriptet.</p>
+                <p>Der Raum ist klar, ehrlich und freundlich. Ich benenne, was ich sehe, stelle pr&auml;zise Fragen und bleibe bei dir, wenn es unbequem wird, ohne deine Grenzen zu &uuml;berschreiten.</p>
+                <p>Du bist aktiv im Prozess. Mit der Zeit baut sich Bewusstsein, Wahlfreiheit und neue Wege des Umgangs auf. Einsicht ist wichtig, aber das Ziel ist gelebte Ver&auml;nderung.</p>
+            </div>
+            <div>
+                <h4 style="font-size:0.88rem; margin-bottom:0.3rem;">Was diese Arbeit leitet</h4>
+                <ul class="values-list">
+                    <li><span class="val-name">Mut</span><span class="val-desc">Benennen, was wirklich ist, auch wenn es unbequem ist.</span></li>
+                    <li><span class="val-name">Klarheit</span><span class="val-desc">Komplexes vereinfachen, damit gehandelt werden kann.</span></li>
+                    <li><span class="val-name">Verbindung</span><span class="val-desc">Mit Menschen arbeiten, nicht mit Rollen.</span></li>
+                    <li><span class="val-name">Leichtigkeit</span><span class="val-desc">Tiefe ohne Schwere.</span></li>
+                    <li><span class="val-name">Verantwortung</span><span class="val-desc">Zuverl&auml;ssig und ehrlich pr&auml;sent sein.</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section-warm">
+    <div class="section-inner">
+        <div class="section-label">&Uuml;ber mich</div>
+        <h2 class="section-title">Karin Gutenbrunner Byom</h2>
+        <div class="gold-line"></div>
+        <div class="about-text" style="max-width:700px;">
+            <p>Ich bin auf einem Bio-Pionierhof in Ober&ouml;sterreich aufgewachsen, gepr&auml;gt von Verantwortung, Gemeinschaft und dem Mut, neue Wege zu gehen. Viele Jahre habe ich zivilgesellschaftliche Projekte initiiert und begleitet und sp&auml;ter in Projektmanagement, Change Management und agiler Organisationsentwicklung in verschiedenen Branchen gearbeitet.</p>
+            <p>Seit 2019 arbeite ich selbst&auml;ndig als Coach und Facilitatorin, fundiert ausgebildet und in laufender Weiterbildung in Beratung und Supervision. Ich bin ausgebildet in systemischem und integralem Coaching sowie in relationaler F&uuml;hrung.</p>
+            <p>Eine schwere Long-Covid-Erkrankung 2022 hat meine Praxis vertieft. Monate fast vollst&auml;ndiger sensorischer Reduktion haben mir gezeigt, was es bedeutet, wenn Orientierung, Energie und Selbstverst&auml;ndlichkeiten wegfallen, und was Menschen brauchen, um Schritt f&uuml;r Schritt ihre Handlungsf&auml;higkeit zur&uuml;ckzugewinnen.</p>
+            <p>Ich arbeite direkt und warm, fachlich klar und menschlich im Ton.</p>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials">
+    <div class="section-inner" style="text-align:center;">
+        <div class="section-label">Stimmen</div>
+        <h2 class="section-title">Was Klient:innen sagen</h2>
+        <div class="gold-line-center"></div>
+        <div class="test-grid">
+            <div class="test-card">
+                <blockquote>"You don't sugarcoat, you don't waste time, and you don't hide behind polite diplomacy. Working with you feels like stepping into clarity."</blockquote>
+                <cite>Joachim Majambere</cite>
+            </div>
+            <div class="test-card">
+                <blockquote>"Working with Karin has been one of the easiest 'yeses' of my professional life. She brings a level of presence, honesty, and emotional clarity that makes the work feel both grounded and expansive."</blockquote>
+                <cite>Maaz Raees</cite>
+            </div>
+            <div class="test-card">
+                <blockquote>"Testimonial ausstehend."</blockquote>
+                <cite>Dr. Martin Wolfsegger</cite>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section-warm">
+    <div class="contact-center">
+        <div class="section-label">Kontakt</div>
+        <h2 class="section-title">Hier starten</h2>
+        <div class="gold-line-center"></div>
+        <p>Wenn du an einem Punkt bist, an dem sich etwas &auml;ndern muss, aber die Richtung noch nicht klar ist, ist das der richtige Anfang. Unser erstes Gespr&auml;ch ist kostenfrei und unkompliziert.</p>
+        <div class="contact-links">
+            <a href="mailto:karin@byom.com">karin@byom.com</a>
+            <a href="tel:+4747382740">+47 473 82 740</a>
+        </div>
+        <p class="contact-loc">Standort Askim, Norwegen. International t&auml;tig, online und in Pr&auml;senz.</p>
+    </div>
+</section>
+
+</div>
+
+<!-- ===== NORSK ===== -->
+<div lang="no">
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Klarhet for mennesker og organisasjoner ved <em>vendepunkter</em>.</h1>
+        <p>Jeg fasiliterer prosesser n&aring;r mye er i bevegelse samtidig og retningen f&oslash;les uklar. Jeg holder et rolig, direkte rom, bryter kompleksitet ned til det som virkelig betyr noe, og hjelper deg &aring; se hvor neste steg ligger.</p>
+        <a href="#contact" class="btn">Bestill en gratis samtale</a>
+        <p class="hero-sub">eller <a href="#services">se hvordan jeg jobber</a></p>
+    </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<section>
+    <div class="section-narrow intro-center">
+        <div class="section-label">Hvem dette er for</div>
+        <div class="gold-line-center"></div>
+        <p>Dette arbeidet er for deg som b&aelig;rer ansvar og kompleksitet. Som er del av et team eller en organisasjon i endring. Som st&aring;r ved et vendepunkt der det &aring; presse hardere ikke lenger fungerer.</p>
+        <p>Om du s&oslash;ker &aelig;rlig refleksjon, struktur og klarhet fremfor raske l&oslash;sninger.</p>
+        <p style="font-size:0.9rem; color:var(--text-light); margin-top:1.5rem;">Jeg jobber med enkeltpersoner, par, team, organisasjoner og foreninger over hele Europa.<br>Basert i Askim, Norge.</p>
+    </div>
+</section>
+
+<section id="services" class="section-warm">
+    <div class="section-inner">
+        <div class="section-label">Tjenester</div>
+        <h2 class="section-title">Hvordan jeg jobber med deg</h2>
+        <div class="gold-line"></div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Individuell coaching &amp; parsamtaler</h3>
+                <p>Et klart, &aelig;rlig rom der vi ser p&aring; hva som virkelig skjer i livet ditt og relasjonene dine. Vi jobber med m&oslash;nstre, dynamikker og det som er til stede i &oslash;yeblikket, slik at kompleksitet blir forst&aring;elig og bevegelse igjen mulig.</p>
+                <div class="service-for">For mennesker i overgang, ved beslutningspunkter, under press, eller med et klart &oslash;nske om vekst. For par som trenger klarhet og &aelig;rlig samtale.</div>
+                <a href="#contact" class="service-link">Gratis f&oslash;rstesamtale &rarr;</a>
+            </div>
+            <div class="service-card">
+                <h3>Deep Dive-program</h3>
+                <p>For mennesker ved vendepunkter. Etter sykdom, utbrenthet, samlivsbrudd eller andre store livsendringer. Individuell coaching, gruppesamtaler, en intensiv helg med 6 til 12 deltakere, etterfulgt av m&aring;neder med integrasjonscoaching.</p>
+                <div class="service-for">Intensivt, online og fysisk. Et dypdykk i din utvikling sammen med andre coacher og deltakere.</div>
+                <a href="#contact" class="service-link">Gratis f&oslash;rstesamtale &rarr;</a>
+            </div>
+            <div class="service-card">
+                <h3>Fasilitering &amp; lederutvikling</h3>
+                <p>Fasilitering, prosessst&oslash;tte og lederutvikling. Holde rom for team, gj&oslash;re dynamikker synlige, skape struktur s&aring; bevegelse blir mulig. Trening, undervisning, individuell ledercoaching.</p>
+                <div class="service-for">For grunnleggere, ledergrupper og organisasjoner ved vendepunkter. Skreddersydd.</div>
+                <a href="#contact" class="service-link">Gratis f&oslash;rstesamtale &rarr;</a>
+            </div>
+            <div class="service-card">
+                <h3>Veiledning &amp; faglig refleksjon</h3>
+                <p>Veiledning og faglig refleksjon for r&aring;dgivere, fagpersoner og ledere som jobber tett med mennesker. Reflekterende praksis, tydelige grenser, b&aelig;rekraftig profesjonell utvikling. Individuelt og i grupper.</p>
+                <div class="service-for">For fagfolk i ledelse eller hjelpeprofesjoner. Online og fysisk.</div>
+                <a href="#contact" class="service-link">Gratis f&oslash;rstesamtale &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="approach">
+    <div class="section-inner">
+        <div class="section-label">Tiln&aelig;rming</div>
+        <h2 class="section-title">Hvordan klarhet oppst&aring;r</h2>
+        <div class="gold-line"></div>
+        <div class="approach-grid">
+            <div>
+                <p>Arbeidet mitt ser p&aring; deg, relasjonene dine og konteksten din samtidig. Endring starter med hvem du er og hvordan du viser deg, og beveger seg deretter til hva du gj&oslash;r og skaper.</p>
+                <p>Jeg kombinerer metoder fra systemisk coaching, integrale rammeverk og relasjonell ledelse med en sv&aelig;rt n&aelig;rv&aelig;rende, menneskelig arbeidsm&aring;te. Samtalene er strukturerte, men ikke skriptede.</p>
+                <p>Rommet er klart, &aelig;rlig og vennlig. Jeg navngir det jeg ser, stiller presise sp&oslash;rsm&aring;l og blir med deg n&aring;r det blir ubehagelig, uten &aring; presse forbi grensene dine.</p>
+                <p>Du er aktiv i prosessen. Over tid bygger dette bevissthet, valgfrihet og nye m&aring;ter &aring; forholde seg p&aring;. Innsikt er viktig, men m&aring;let er levd endring.</p>
+            </div>
+            <div>
+                <h4 style="font-size:0.88rem; margin-bottom:0.3rem;">Hva som leder dette arbeidet</h4>
+                <ul class="values-list">
+                    <li><span class="val-name">Mot</span><span class="val-desc">Navngi det som er virkelig, selv n&aring;r det er ubehagelig.</span></li>
+                    <li><span class="val-name">Klarhet</span><span class="val-desc">Forenkle det komplekse slik at folk kan handle.</span></li>
+                    <li><span class="val-name">Forbindelse</span><span class="val-desc">Jobbe med mennesker, ikke roller.</span></li>
+                    <li><span class="val-name">Letthet</span><span class="val-desc">Dybde uten tyngde.</span></li>
+                    <li><span class="val-name">Ansvar</span><span class="val-desc">V&aelig;re konsekvent og &aelig;rlig til stede.</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section-warm">
+    <div class="section-inner">
+        <div class="section-label">Om meg</div>
+        <h2 class="section-title">Karin Gutenbrunner Byom</h2>
+        <div class="gold-line"></div>
+        <div class="about-text" style="max-width:700px;">
+            <p>Jeg vokste opp p&aring; en &oslash;kologisk piong&aring;rd i &Oslash;vre &Oslash;sterrike, formet av ansvar, fellesskap og motet til &aring; g&aring; nye veier. I mange &aring;r initierte og st&oslash;ttet jeg samfunnsprosjekter, og jobbet senere med prosjektledelse, endringsledelse og smidig organisasjonsutvikling p&aring; tvers av sektorer.</p>
+            <p>Siden 2019 har jeg jobbet selvstendig som coach og fasilitator, med solid utdanning og l&oslash;pende videreutdanning i r&aring;dgivning og veiledning. Jeg er utdannet i systemisk og integralt coaching og i relasjonell ledelse.</p>
+            <p>En alvorlig Long Covid-episode i 2022 fordypet praksisen min. M&aring;neder med nesten fullstendig sensorisk reduksjon viste meg hva det betyr n&aring;r orientering, energi og det selvf&oslash;lgelige faller bort, og hva mennesker trenger for &aring; gjenvinne sin handlekraft steg for steg.</p>
+            <p>Jeg jobber direkte og varmt, faglig tydelig og menneskelig i tonen.</p>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials">
+    <div class="section-inner" style="text-align:center;">
+        <div class="section-label">Referanser</div>
+        <h2 class="section-title">Hva klienter sier</h2>
+        <div class="gold-line-center"></div>
+        <div class="test-grid">
+            <div class="test-card">
+                <blockquote>"You don't sugarcoat, you don't waste time, and you don't hide behind polite diplomacy. Working with you feels like stepping into clarity."</blockquote>
+                <cite>Joachim Majambere</cite>
+            </div>
+            <div class="test-card">
+                <blockquote>"Working with Karin has been one of the easiest 'yeses' of my professional life. She brings presence, honesty, and emotional clarity that makes the work feel both grounded and expansive."</blockquote>
+                <cite>Maaz Raees</cite>
+            </div>
+            <div class="test-card">
+                <blockquote>"Tekst venter."</blockquote>
+                <cite>Dr. Martin Wolfsegger</cite>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section-warm">
+    <div class="contact-center">
+        <div class="section-label">Kontakt</div>
+        <h2 class="section-title">Start her</h2>
+        <div class="gold-line-center"></div>
+        <p>Hvis du er p&aring; et punkt der noe m&aring; endres, men retningen enn&aring; ikke er klar, er dette riktig sted &aring; begynne. V&aring;r f&oslash;rste samtale er gratis og uforpliktende.</p>
+        <div class="contact-links">
+            <a href="mailto:karin@byom.com">karin@byom.com</a>
+            <a href="tel:+4747382740">+47 473 82 740</a>
+        </div>
+        <p class="contact-loc">Basert i Askim, Norge. Jobber internasjonalt, online og fysisk.</p>
+    </div>
+</section>
+
+</div>
+
+<footer>
+    <p>&copy; 2025 BYOM &mdash; Karin Gutenbrunner Byom &nbsp;&middot;&nbsp; <a href="mailto:karin@byom.com">karin@byom.com</a></p>
+</footer>
+
+<script>
+function setLang(lang) {
+    document.body.className = 'lang-' + lang;
+    document.querySelectorAll('.nav-lang a').forEach(a => a.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.documentElement.lang = lang === 'no' ? 'nb' : lang;
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+
+</body>
+</html>
