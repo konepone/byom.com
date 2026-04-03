@@ -242,17 +242,17 @@
 <nav>
     <div class="nav-inner">
         <a href="#" class="nav-logo">
-            <img src="assets/logos/Logo_V2.0-14.png" alt="BYOM">
+            <img src="assets/logos/Logo_V2.0-07.png" alt="BYOM" style="height:44px;width:auto;">
             <span>BYOM</span>
         </a>
         <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
             <span></span><span></span><span></span>
         </button>
         <ul class="nav-links">
-            <li><a href="#services"><span lang="en">Services</span><span lang="de">Angebote</span><span lang="no">Tjenester</span></a></li>
-            <li><a href="#approach"><span lang="en">Approach</span><span lang="de">Arbeitsweise</span><span lang="no">Tiln&aelig;rming</span></a></li>
-            <li><a href="#about"><span lang="en">About</span><span lang="de">&Uuml;ber mich</span><span lang="no">Om meg</span></a></li>
-            <li><a href="#contact" class="nav-cta"><span lang="en">Free Clarity Call</span><span lang="de">Erstgespr&auml;ch</span><span lang="no">Gratis samtale</span></a></li>
+            <li><a href="javascript:void(0)" onclick="navTo('services')"><span lang="en">Services</span><span lang="de">Angebote</span><span lang="no">Tjenester</span></a></li>
+            <li><a href="javascript:void(0)" onclick="navTo('approach')"><span lang="en">Approach</span><span lang="de">Arbeitsweise</span><span lang="no">Tiln&aelig;rming</span></a></li>
+            <li><a href="javascript:void(0)" onclick="navTo('about')"><span lang="en">About</span><span lang="de">&Uuml;ber mich</span><span lang="no">Om meg</span></a></li>
+            <li><a href="javascript:void(0)" onclick="navTo('contact')" class="nav-cta"><span lang="en">Free Clarity Call</span><span lang="de">Erstgespr&auml;ch</span><span lang="no">Gratis samtale</span></a></li>
             <li class="nav-lang">
                 <a onclick="setLang('en')" id="lang-en" class="active">EN</a>
                 <a onclick="setLang('de')" id="lang-de">DE</a>
@@ -390,8 +390,8 @@
                 <cite>Maaz Raees</cite>
             </div>
             <div class="test-card">
-                <blockquote>"Testimonial pending."</blockquote>
-                <cite>Dr. Martin Wolfsegger</cite>
+                <blockquote>"Karin and her associate fostered an open, trusting environment that encouraged all participants to reflect honestly. They guided the process using a clear, well-structured framework and explained complex tools in an accessible, practical manner. Their resource-oriented approach empowered team members to develop their own solutions. The team demonstrated professionalism, empathy, and strong expertise, and made a significant contribution and positive impact."</blockquote>
+                <cite>Dr. Martin Wolfsegger, PhD, CStat</cite>
             </div>
         </div>
     </div>
@@ -453,7 +453,7 @@
     </div>
 </section>
 
-<section id="services" class="section-warm">
+<section id="services-de" class="section-warm">
     <div class="section-inner">
         <div class="section-label">Angebote</div>
         <h2 class="section-title">Wie ich arbeite</h2>
@@ -493,7 +493,7 @@
     </div>
 </section>
 
-<section id="approach">
+<section id="approach-de">
     <div class="section-inner">
         <div class="section-label">Arbeitsweise</div>
         <h2 class="section-title">Wie Klarheit entsteht</h2>
@@ -519,7 +519,7 @@
     </div>
 </section>
 
-<section id="about" class="section-warm">
+<section id="about-de" class="section-warm">
     <div class="section-inner">
         <div class="section-label">&Uuml;ber mich</div>
         <h2 class="section-title">Karin Gutenbrunner Byom</h2>
@@ -533,7 +533,7 @@
     </div>
 </section>
 
-<section id="testimonials">
+<section id="testimonials-de">
     <div class="section-inner" style="text-align:center;">
         <div class="section-label">Stimmen</div>
         <h2 class="section-title">Was Klient:innen sagen</h2>
@@ -548,14 +548,14 @@
                 <cite>Maaz Raees</cite>
             </div>
             <div class="test-card">
-                <blockquote>"Testimonial ausstehend."</blockquote>
-                <cite>Dr. Martin Wolfsegger</cite>
+                <blockquote>"Karin und ihre Kollegin schufen ein offenes, vertrauensvolles Klima, das ehrliche Reflexion ermöglichte. Sie leiteten den Prozess mit klarem Rahmen und vermittelten komplexe Modelle verständlich und praxisnah. Ihr ressourcenorientierter Ansatz befähigte die Teilnehmenden zu eigenen Lösungen. Das Team zeigte Professionalität, Empathie und Fachkompetenz und hat einen bedeutenden positiven Beitrag geleistet."</blockquote>
+                <cite>Dr. Martin Wolfsegger, PhD, CStat</cite>
             </div>
         </div>
     </div>
 </section>
 
-<section id="contact" class="section-warm">
+<section id="contact-de" class="section-warm">
     <div class="contact-center">
         <div class="section-label">Kontakt</div>
         <h2 class="section-title">Hier starten</h2>
@@ -610,7 +610,7 @@
     </div>
 </section>
 
-<section id="services" class="section-warm">
+<section id="services-no" class="section-warm">
     <div class="section-inner">
         <div class="section-label">Tjenester</div>
         <h2 class="section-title">Hvordan jeg jobber med deg</h2>
@@ -650,7 +650,7 @@
     </div>
 </section>
 
-<section id="approach">
+<section id="approach-no">
     <div class="section-inner">
         <div class="section-label">Tiln&aelig;rming</div>
         <h2 class="section-title">Hvordan klarhet oppst&aring;r</h2>
@@ -676,7 +676,7 @@
     </div>
 </section>
 
-<section id="about" class="section-warm">
+<section id="about-no" class="section-warm">
     <div class="section-inner">
         <div class="section-label">Om meg</div>
         <h2 class="section-title">Karin Gutenbrunner Byom</h2>
@@ -690,7 +690,7 @@
     </div>
 </section>
 
-<section id="testimonials">
+<section id="testimonials-no">
     <div class="section-inner" style="text-align:center;">
         <div class="section-label">Referanser</div>
         <h2 class="section-title">Hva klienter sier</h2>
@@ -705,14 +705,14 @@
                 <cite>Maaz Raees</cite>
             </div>
             <div class="test-card">
-                <blockquote>"Tekst venter."</blockquote>
-                <cite>Dr. Martin Wolfsegger</cite>
+                <blockquote>"Karin og hennes kollega skapte et åpent, tillitsfullt miljø som oppmuntret alle deltakerne til å reflektere ærlig. De ledet prosessen med en klar, velstrukturert ramme og forklarte komplekse verktøy på en tilgjengelig og praktisk måte. Teamet viste profesjonalitet, empati og sterk fagkompetanse og ga et betydelig positivt bidrag."</blockquote>
+                <cite>Dr. Martin Wolfsegger, PhD, CStat</cite>
             </div>
         </div>
     </div>
 </section>
 
-<section id="contact" class="section-warm">
+<section id="contact-no" class="section-warm">
     <div class="contact-center">
         <div class="section-label">Kontakt</div>
         <h2 class="section-title">Start her</h2>
@@ -752,8 +752,14 @@ function setLang(lang) {
     document.body.className = 'lang-' + lang;
     document.querySelectorAll('.nav-lang a').forEach(a => a.classList.remove('active'));
     document.getElementById('lang-' + lang).classList.add('active');
-    document.documentElement.lang = lang === 'no' ? 'nb' : lang;
     window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function navTo(section) {
+    var lang = document.body.className.replace('lang-','') || 'en';
+    var prefix = lang === 'en' ? '' : '-' + lang;
+    var el = document.getElementById(section + prefix) || document.getElementById(section);
+    if(el) el.scrollIntoView({behavior: 'smooth', block: 'start'});
 }
 </script>
 
